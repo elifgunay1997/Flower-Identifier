@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flower Identifier - Discover the Beauty of Nature</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <i class="fas fa-seedling"></i>
+                <h1>Flower Identifier</h1>
+            </div>
+            <p class="tagline">Discover the beauty of nature, one flower at a time</p>
+        </header>
+
+        <main class="main-content">
+            <div class="upload-section">
+                <div class="upload-area" id="uploadArea">
+                    <div class="upload-content">
+                        <i class="fas fa-camera"></i>
+                        <h3>Take or Upload a Photo</h3>
+                        <p>Click to upload or drag and drop your flower image</p>
+                        <button class="upload-btn" id="uploadBtn">
+                            <i class="fas fa-upload"></i>
+                            Choose Image
+                        </button>
+                        <input type="file" id="fileInput" accept="image/*" capture="environment" style="display: none;">
+                    </div>
+                </div>
+
+                <div class="camera-section">
+                    <button class="camera-btn" id="cameraBtn">
+                        <i class="fas fa-camera"></i>
+                        Use Camera
+                    </button>
+                    <div class="camera-preview" id="cameraPreview" style="display: none;">
+                        <video id="video" autoplay muted></video>
+                        <button class="capture-btn" id="captureBtn">
+                            <i class="fas fa-circle"></i>
+                            Capture
+                        </button>
+                        <button class="close-camera-btn" id="closeCameraBtn">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="result-section" id="resultSection" style="display: none;">
+                <div class="result-header">
+                    <h2>Flower Information</h2>
+                    <button class="new-search-btn" id="newSearchBtn">
+                        <i class="fas fa-plus"></i>
+                        New Search
+                    </button>
+                </div>
+
+                <div class="result-content">
+                    <div class="image-preview">
+                        <img id="resultImage" alt="Uploaded flower">
+                    </div>
+
+                    <div class="flower-info">
+                        <div class="flower-name">
+                            <h3 id="flowerName">Loading...</h3>
+                            <span class="scientific-name" id="scientificName"></span>
+                        </div>
+
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <i class="fas fa-leaf"></i>
+                                <div>
+                                    <h4>Family</h4>
+                                    <p id="family">-</p>
+                                </div>
+                            </div>
+
+                            <div class="info-item">
+                                <i class="fas fa-sun"></i>
+                                <div>
+                                    <h4>Light Requirements</h4>
+                                    <p id="lightRequirements">-</p>
+                                </div>
+                            </div>
+
+                            <div class="info-item">
+                                <i class="fas fa-tint"></i>
+                                <div>
+                                    <h4>Water Needs</h4>
+                                    <p id="waterNeeds">-</p>
+                                </div>
+                            </div>
+
+                            <div class="info-item">
+                                <i class="fas fa-thermometer-half"></i>
+                                <div>
+                                    <h4>Climate</h4>
+                                    <p id="climate">-</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="description">
+                            <h4>Description</h4>
+                            <p id="description">-</p>
+                        </div>
+
+                        <div class="care-tips">
+                            <h4>Care Tips</h4>
+                            <ul id="careTips">
+                                <li>-</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="loading-section" id="loadingSection" style="display: none;">
+                <div class="loading-spinner">
+                    <i class="fas fa-seedling fa-spin"></i>
+                </div>
+                <h3>Analyzing your flower...</h3>
+                <p>This may take a few moments</p>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2024 Flower Identifier. Made with <i class="fas fa-heart"></i> for nature lovers.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
