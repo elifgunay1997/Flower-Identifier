@@ -74,6 +74,7 @@ npx live-server
 - [ ] Seasonal flower recommendations
 - [ ] Flower care calendar
 
+- **Project Link**: [file:///Users/elifgunay/Desktop/flower-idetifier/index.html]
 
 ---
 
